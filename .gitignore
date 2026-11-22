@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+hosts.ini
+.authorized_key.json
+.terraformrc
+terraform.rc

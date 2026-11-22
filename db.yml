@@ -1,0 +1,15 @@
+- name: Install and start PostgreSQL
+  hosts: databases
+  become: true
+  tasks:
+    - name: Install postgresql
+      apt:
+        name: postgresql
+        state: present
+        update_cache: yes
+
+    - name: Ensure postgresql is running and enabled
+      service:
+        name: postgresql
+        state: started
+        enabled: yes

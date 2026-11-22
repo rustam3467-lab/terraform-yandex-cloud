@@ -1,0 +1,8 @@
+- name: test
+  hosts: webservers
+  become: true
+  tasks:
+    - name: create test file
+      copy:
+        dest: /tmp/test
+        content: "success"
